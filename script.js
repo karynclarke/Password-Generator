@@ -28,25 +28,20 @@ function generatePassword() {
 
 
         upper = window.prompt("do you want upper case ( y or n ) ?");
-
         if (upper === "y") {
             charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         }
 
 
         number = window.prompt("do you want numbers ( y or n ) ?");
-
         if (number === "y") {
             charset += "0123456789";
         }
 
-
         special = window.prompt("do you want special characters (y or n)?");
-
         if (special === "y") {
             charset += "-*%$#@!&()_+~";
         }
-
 
         // generates the password using the included characters
 
@@ -58,9 +53,6 @@ function generatePassword() {
         pass.innerHTML = retVal;
 
     }
-
-
-
 
 
 }

@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 html,
 body,
 .wrapper {
@@ -134,5 +135,6 @@ button[disabled] {
   .btn {
     font-size: 0.8rem;
   }
+  
 }
 
