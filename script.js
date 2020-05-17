@@ -10,8 +10,8 @@ function generatePassword() {
 
         l = window.prompt("Pick a number between 8 and 128")
 
-
     }
+
     else {
 
         // asking what values desired in the password elements
@@ -20,89 +20,40 @@ function generatePassword() {
             retVal = "", lower = "", upper = "", number = "", special = "";
 
 
-
         lower = window.prompt("do you want lower case ( y or n ) ?");
 
-        if (lower == "y") {
-
+        if (lower === "y") {
             charset += "abcdefghijklmnopqrstuvwxyz";
-
         }
 
 
         upper = window.prompt("do you want upper case ( y or n ) ?");
 
-        if (upper == "y") {
-
+        if (upper === "y") {
             charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
         }
 
 
         number = window.prompt("do you want numbers ( y or n ) ?");
 
-        if (number == "y") {
-
+        if (number === "y") {
             charset += "0123456789";
-
         }
 
 
         special = window.prompt("do you want special characters (y or n)?");
 
-        if (special == "y") {
-
+        if (special === "y") {
             charset += "-*%$#@!&()_+~";
-
         }
 
 
-
-        while (charset.length < 20) {
-
-            alert("Select more characters to include into the password");
-
-
-            lower = window.prompt("do you want lower case ( y or n ) ?");
-
-            if (lower == "y") {
-
-                charset += "abcdefghijklmnopqrstuvwxyz";
-
-            }
-
-            upper = window.prompt("do you want upper case ( y or n ) ?");
-
-            if (upper == "y") {
-
-                charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-            }
-
-            number = window.prompt("do you want numbers ( y or n ) ?");
-
-            if (number == "y") {
-
-                charset += "0123456789";
-
-            }
-
-            special = window.prompt("do you want special characters (y or n)?");
-
-            if (special == "y") {
-
-                charset += "-*%$#@!&()_+~";
-
-            }
-
-
-        }
+        // generates the password using the included characters
 
         for (var i = 0, n = charset.length; i < length; ++i) {
             retVal += charset.charAt(Math.floor(Math.random() * n));
         }
         var pass = document.getElementById("password");
-
 
         pass.innerHTML = retVal;
 
